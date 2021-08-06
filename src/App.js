@@ -1,4 +1,5 @@
 import './App.css';
+import NavBar from './components/NavBar/NavBar';
 
 
 
@@ -8,9 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-       <h1>Front End Test</h1>
-      </header>
+      <NavBar/>
     </div>
   );
 }
