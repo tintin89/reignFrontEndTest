@@ -1,0 +1,23 @@
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer ul{
+    list-style: none;
+    display: flex;
+}
+
+.footer ul li{
+  cursor: pointer;
+  width: 32px;
+  height: 32px;  
+  border-radius: 6px;
+  border: solid 1px #d9d9d9;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.65);
+}
