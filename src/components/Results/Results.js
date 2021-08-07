@@ -1,26 +1,20 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import './Results.css';
-import {useSelector} from 'react-redux'; 
 import Element from './Element/Element';
 
 
-const mapState=(myStateApp)=>({
-    posts:myStateApp.posts
-})
-
-function Results() {
-    const {posts} = useSelector(mapState);
 
 
 
-
+function Results(props) {  
+   
     return (
         
         <div className="results">
            {
                
-               posts.map((e,index)=>(
-                   <Element key={index} {...e}/>
+               props.arr?.map((e)=>(
+                   <Element key={e.id} {...e} index/>
                ))
            }
         </div>

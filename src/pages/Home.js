@@ -1,16 +1,23 @@
 import React from 'react'
+import '../App.css';
 import Results from '../components/Results/Results';
 import Footer from '../components/Footer/Footer';
+import {useSelector} from 'react-redux';  
 
-import '../App.css';
+const mapState = (myStateApp)=>({
+    posts:myStateApp.posts
+})
+
+
 
 function Home() {
+    const {posts} = useSelector(mapState);
     return (   
         <>
         <main>               
-         <Results/>    
+         <Results arr={posts}/>    
       </main>
-        <Footer/>
+      
         </>
        
     )
