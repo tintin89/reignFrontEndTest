@@ -1,6 +1,6 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios';
-import { isFavorite } from '../utility';
+
 
 
 export const updatePost=(data)=>{
@@ -32,8 +32,7 @@ export const fetchPosts=(query,page)=>{
      if(query!=="Select your news"){
          
         axios.get(` https://hn.algolia.com/api/v1/search_by_date?query=${query}&page=${page}`)
-        .then(response=>{
-         
+        .then(response=>{         
            const temp = response.data.hits.filter(e=>{
              if(e.author!==null&&e.story_title!==null&&e.story_url!==null&&e.created_at!==null){
                  return e;
@@ -48,7 +47,7 @@ export const fetchPosts=(query,page)=>{
                      }            
         ));         
            dispatch(updatePost(temp));
-           dispatch(updateFavorites(temp.filter(e=>isFavorite(e.id) && e)));
+           
            
         })
         .catch(error=>{

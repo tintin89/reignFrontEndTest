@@ -20,8 +20,7 @@ function Dropdown() {
     const [selected,setSelected] = useState({tag:"Select your news",img:""});
 
 
-    useEffect(() => {
-       
+    useEffect(() => {       
        setSelected(query);
     }, [query])
 
