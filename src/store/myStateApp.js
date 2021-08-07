@@ -3,7 +3,8 @@ import * as actionTypes from './actionTypes';
 
 
 const initialState = {
-  posts:[]
+  posts:[],
+
 };
 
 
@@ -15,7 +16,8 @@ const myStateApp = (state=initialState,action)=>{
         ...state,
         posts:action.payload
       }
-              default:
+
+       default:
             return state
     }
 }

@@ -3,7 +3,7 @@ import Results from '../components/Results/Results';
 
 function Faves() {
     return (
-       <Results/>
+       <Results myFavs/>
     )
 }
 
