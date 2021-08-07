@@ -5,6 +5,7 @@ import * as actionTypes from './actionTypes';
 const initialState = {
   posts:[],
   favorites:[],
+  query:sessionStorage.getItem("query") ? JSON.parse(sessionStorage.getItem("query")) : {tag:"Select your news",img:""}
 
 };
 
@@ -22,6 +23,12 @@ const myStateApp = (state=initialState,action)=>{
           ...state,
           favorites:action.payload
         }
+
+      case actionTypes.UPDATE_QUERY:
+        return {
+          ...state,
+          query:action.payload
+        }  
 
        default:
             return state

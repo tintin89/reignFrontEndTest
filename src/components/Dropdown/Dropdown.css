@@ -76,3 +76,10 @@ background-color: #eaeaea54;
    letter-spacing: normal;
    color: #343434;
 }
+
+
+@media (max-width: 600px){
+  .dropdown__container{
+    justify-content: center;
+  }
+}
