@@ -10,7 +10,7 @@ function NavBar() {
             <div className="nav">
                 <ul>                    
                     <li><NavLink exact to="/">All</NavLink></li>
-                    <li><NavLink to="/faves">Faves</NavLink></li>
+                    <li><NavLink to="/faves">My faves</NavLink></li>
                 </ul>
             </div>
         </header>

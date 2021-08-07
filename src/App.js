@@ -4,13 +4,21 @@ import Home from './pages/Home';
 import { BrowserRouter } from "react-router-dom";
 import { Route, Switch } from "react-router";
 import Faves from './pages/Faves';
+import {useDispatch} from 'react-redux';
+import {useEffect} from 'react';
+import {fetchPosts} from './store/actions';
 
 
 
 
 
 function App() {
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    console.log("se monto")
+    dispatch(fetchPosts("reactjs",0))
+  })
 
   return (
     <div className="App">
