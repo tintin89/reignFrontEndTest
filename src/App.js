@@ -16,7 +16,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log("se monto")
+   
     dispatch(fetchPosts("reactjs",0))
   })
 

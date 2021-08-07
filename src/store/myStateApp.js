@@ -4,6 +4,7 @@ import * as actionTypes from './actionTypes';
 
 const initialState = {
   posts:[],
+  favorites:[],
 
 };
 
@@ -16,6 +17,11 @@ const myStateApp = (state=initialState,action)=>{
         ...state,
         posts:action.payload
       }
+      case actionTypes.UPDATE_FAVS:
+        return {
+          ...state,
+          favorites:action.payload
+        }
 
        default:
             return state
