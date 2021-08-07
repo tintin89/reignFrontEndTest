@@ -16,22 +16,18 @@ function Element({title,id,created,author}) {
     const dispatch = useDispatch();
     const [fav,setFav] = useState(localStorage.getItem("favorites") ? isFavorite(id) : false);
 
-    const handleFavorite = ()=>{
-              
-        const temp = localStorage.getItem("favorites") ? JSON.parse(localStorage.getItem("favorites")) : [];
+    const handleFavorite = ()=>{        
         const favTemp = favorites;
         if(!fav){
-            setFav(true);
-            temp.push(id);
+            setFav(true);            
             favTemp.push({title,id,created,author})
-            localStorage.setItem("favorites",JSON.stringify(temp));
+            localStorage.setItem("favorites",JSON.stringify(favTemp));
             dispatch(updateFavorites(favTemp));
         }else{
             setFav(false);
-            localStorage.setItem("favorites",JSON.stringify(temp.filter(e=>e!==id && e)));
-            const filterFav = favTemp.filter(e=>e.id!==id)
-            dispatch(updateFavorites(filterFav));
-         
+            localStorage.setItem("favorites",JSON.stringify(favTemp.filter(e=>e.id!==id)));
+            const filterFav = favTemp.filter(e=>e.id!==id);
+            dispatch(updateFavorites(filterFav));         
         }
         
         
