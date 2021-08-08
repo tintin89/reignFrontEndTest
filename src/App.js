@@ -7,23 +7,23 @@ import Faves from './pages/Faves';
 import {useDispatch,useSelector} from 'react-redux';
 import {useEffect} from 'react';
 import {fetchPosts} from './store/actions';
-import moment from 'moment';
+
 
 const mapState=(myStateApp)=>({
-  query:myStateApp.query
+  query:myStateApp.query,
+  page:myStateApp.page
 })
 
 
 
 
 function App() {
-  const {query} = useSelector(mapState);
+  const {query,page} = useSelector(mapState);
   const dispatch = useDispatch();
 
   useEffect(() => {
-
-    dispatch(fetchPosts(query.tag,0))
-  },[query,dispatch])
+    dispatch(fetchPosts(query.tag,page));
+  },[query,page,dispatch])
 
   return (
     <div className="App">

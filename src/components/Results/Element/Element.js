@@ -6,13 +6,13 @@ import clock from '../../../assets/iconmonstr-time-2.svg';
 import { isFavorite } from '../../../utility';
 import {useDispatch,useSelector} from 'react-redux';
 import {updateFavorites} from '../../../store/actions';
-import moment from 'moment';
+
 
 const mapState = (myStateApp)=>({
     favorites:myStateApp.favorites
 })
 
-function Element({title,id,created,author}) {   
+function Element({title,id,created,author,refProp,url}) {   
     const {favorites} = useSelector(mapState);
     const dispatch = useDispatch();
     const [fav,setFav] = useState(localStorage.getItem("favorites") ? isFavorite(id) : false);
@@ -33,11 +33,16 @@ function Element({title,id,created,author}) {
         
         
     }
+
+    const handleGoToPost = () => {        
+        const win = window.open(url, "_blank");
+        win.focus();
+      }
     
     
     return (
-        <div  className="element">
-           <div className="info">
+        <div ref={refProp}  className="element">
+           <div onClick={()=>handleGoToPost()} className="info">
                 <div className="timeInfo">
                  <img alt="clock" src={clock}/>
                  <span>{created+" by "+author}</span>
