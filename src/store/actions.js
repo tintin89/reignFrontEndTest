@@ -1,5 +1,6 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios';
+import moment from 'moment';
 
 
 
@@ -37,17 +38,20 @@ export const fetchPosts=(query,page)=>{
              if(e.author!==null&&e.story_title!==null&&e.story_url!==null&&e.created_at!==null){
                  return e;
              }else return false
-           }).map(e=>(                                 
-                    {
+           }).map(e=>{
+            const newM = moment(e.created_at, "YYYY-MM-DDTHH:mm:ss.SSSSZ", true).local();  
+            
+                 return   {
                      author:e.author,
                      title:e.story_title,
                      url:e.story_url,
-                     created:e.created_at,  
+                     created:newM.startOf('day').fromNow(),  
                      id:e.objectID                  
                      }            
-        ));         
+                    });         
            dispatch(updatePost(temp));
-           
+          
+         
            
         })
         .catch(error=>{

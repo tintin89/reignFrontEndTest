@@ -7,6 +7,7 @@ import Faves from './pages/Faves';
 import {useDispatch,useSelector} from 'react-redux';
 import {useEffect} from 'react';
 import {fetchPosts} from './store/actions';
+import moment from 'moment';
 
 const mapState=(myStateApp)=>({
   query:myStateApp.query
@@ -20,7 +21,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
- 
+
     dispatch(fetchPosts(query.tag,0))
   },[query,dispatch])
 

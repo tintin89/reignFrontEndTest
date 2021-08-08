@@ -1,7 +1,7 @@
 .dropdown__container{
-    margin-top: 4rem;
+  margin-top: 4rem;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
   display: flex;
 }
 .dropdown{

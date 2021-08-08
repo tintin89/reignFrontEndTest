@@ -6,6 +6,7 @@ import clock from '../../../assets/iconmonstr-time-2.svg';
 import { isFavorite } from '../../../utility';
 import {useDispatch,useSelector} from 'react-redux';
 import {updateFavorites} from '../../../store/actions';
+import moment from 'moment';
 
 const mapState = (myStateApp)=>({
     favorites:myStateApp.favorites
@@ -39,7 +40,7 @@ function Element({title,id,created,author}) {
            <div className="info">
                 <div className="timeInfo">
                  <img alt="clock" src={clock}/>
-                 <span>{created}</span>
+                 <span>{created+" by "+author}</span>
                 </div>
                <h3>{title}</h3>
            </div>
