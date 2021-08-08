@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tests in  <Faves/> Must show correctly the component 1`] = `
+exports[`tests in  <Results/> Must show correctly the component 1`] = `
 <div
   className="results"
 />

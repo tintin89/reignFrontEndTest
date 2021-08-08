@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests in  <Dropdown/> Must show correctly the component 1`] = `
+<div
+  className="element"
+>
+  <div
+    className="info"
+    onClick={[Function]}
+  >
+    <div
+      className="timeInfo"
+    >
+      <img
+        alt="clock"
+        src="iconmonstr-time-2.svg"
+      />
+      <span>
+        undefined by undefined
+      </span>
+    </div>
+    <h3 />
+  </div>
+  <div
+    className="favs"
+    onClick={[Function]}
+  >
+    <img
+      alt="title"
+      src="iconmonstr-favorite-2.svg"
+    />
+  </div>
+</div>
+`;

@@ -1,5 +1,5 @@
 import React from 'react';
-import  { shallow }  from "enzyme";
+import  { mount }  from "enzyme";
 import Faves from '../../pages/Faves';
 import {Provider} from 'react-redux';
 import configureStore from 'redux-mock-store';
@@ -14,7 +14,7 @@ describe('tests in  <Faves/>',()=>{
 
     test('Must show correctly the component',()=>{
        
-        const wrapper = shallow(
+        const wrapper = mount(
             <Provider store={store}>
              <Faves/>
             </Provider>

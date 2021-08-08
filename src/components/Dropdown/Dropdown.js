@@ -40,15 +40,15 @@ function Dropdown() {
         <div className="dropdown__container">
             <div onClick={()=>handleSetShow()} className="dropdown">
                 <div className="dropdown__selected">
-                {selected.img!=="" && <img alt={selected.tag} src={selected.img}/>}
-                <span>{selected.tag}</span>
+                {selected?.img!=="" && <img alt={selected?.tag} src={selected?.img}/>}
+                <span>{selected?.tag}</span>
                 </div>
                 <div className={`Arrow ${show && "upArrow"}`}></div>
             </div>
             <ul style={{display:show ? "flex" : "none"}} className="dropdownList">
               {
                   options.map((e,index)=>
-                 selected.tag!==e.tag && <li onClick={()=>handleFilter(e)} key={index}>
+                 selected?.tag!==e.tag && <li onClick={()=>handleFilter(e)} key={index}>
                    <img alt={e.tag} src={e.img}/>
                    <span>{e.tag}</span>
                   </li>

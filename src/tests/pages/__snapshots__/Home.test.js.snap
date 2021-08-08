@@ -1,37 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests in  <Home/> Must show correctly the component 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "store": Object {
-        "clearActions": [Function],
-        "dispatch": [Function],
-        "getActions": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-      },
-      "subscription": Subscription {
-        "handleChangeWrapper": [Function],
-        "listeners": Object {
-          "notify": [Function],
-        },
-        "onStateChange": [Function],
-        "parentSub": undefined,
-        "store": Object {
-          "clearActions": [Function],
-          "dispatch": [Function],
-          "getActions": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-        },
-        "unsubscribe": null,
-      },
-    }
-  }
->
-  <Home />
-</ContextProvider>
+Array [
+  <div
+    className="dropdown__container"
+  >
+    <div
+      className="dropdown"
+      onClick={[Function]}
+    >
+      <div
+        className="dropdown__selected"
+      >
+        <img />
+        <span />
+      </div>
+      <div
+        className="Arrow false"
+      />
+    </div>
+    <ul
+      className="dropdownList"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      <li
+        key="0"
+        onClick={[Function]}
+      >
+        <img
+          alt="Angular"
+          src="angular.png"
+        />
+        <span>
+          Angular
+        </span>
+      </li>
+      <li
+        key="1"
+        onClick={[Function]}
+      >
+        <img
+          alt="Reactjs"
+          src="react.png"
+        />
+        <span>
+          Reactjs
+        </span>
+      </li>
+      <li
+        key="2"
+        onClick={[Function]}
+      >
+        <img
+          alt="Vuejs"
+          src="vue.png"
+        />
+        <span>
+          Vuejs
+        </span>
+      </li>
+    </ul>
+  </div>,
+  <main>
+    <div
+      className="results"
+    />
+  </main>,
+]
 `;

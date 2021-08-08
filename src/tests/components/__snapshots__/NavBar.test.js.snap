@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests in <NavBar/> Must show correctly the component 1`] = `
+<header
+  className="navBar"
+>
+  <TitleBar />
+  <div
+    className="nav"
+  >
+    <ul>
+      <li>
+        <NavLink
+          exact={true}
+          to="/"
+        >
+          All
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/faves"
+        >
+          My faves
+        </NavLink>
+      </li>
+    </ul>
+  </div>
+</header>
+`;
