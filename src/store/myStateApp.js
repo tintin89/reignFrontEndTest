@@ -29,7 +29,9 @@ const myStateApp = (state=initialState,action)=>{
       case actionTypes.UPDATE_QUERY:
         return {
           ...state,
-          query:action.payload
+          query:action.payload,
+          page:0,
+          scrolling:false
         }  
 
       case actionTypes.UPDATE_PAGE:

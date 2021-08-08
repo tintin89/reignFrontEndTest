@@ -43,7 +43,7 @@ function Dropdown() {
                 {selected.img!=="" && <img alt={selected.tag} src={selected.img}/>}
                 <span>{selected.tag}</span>
                 </div>
-                <div className="downArrow"></div>
+                <div className={`Arrow ${show && "upArrow"}`}></div>
             </div>
             <ul style={{display:show ? "flex" : "none"}} className="dropdownList">
               {

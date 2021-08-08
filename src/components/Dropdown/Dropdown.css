@@ -32,19 +32,24 @@
     margin-left: 0.3rem;
 }
 
-.downArrow{
+.Arrow{
   border: solid #2e2e2e;
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;
+  transition: ease-in-out 0.3s;  
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
 
+.upArrow{
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+}
+
 .dropdownList{   
     z-index: 100;
-    width: 263px;
-    height: 139px;
+    width: 263px;    
     margin: 0 0 0 1px;    
     box-shadow: 0 2px 2px 0 #dad8d8;
     background-color: #fff;
