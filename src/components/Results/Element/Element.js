@@ -21,7 +21,7 @@ function Element({title,id,created,author,refProp,url}) {
         const favTemp = favorites;
         if(!fav){
             setFav(true);            
-            favTemp.push({title,id,created,author})
+            favTemp.push({title,id,created,author,url})
             localStorage.setItem("favorites",JSON.stringify(favTemp));
             dispatch(updateFavorites(favTemp));
         }else{
