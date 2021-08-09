@@ -1,0 +1,16 @@
+.results{      
+    
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 2rem;    
+    display: flex;   
+    justify-content: space-between;   
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .results{       
+        flex-flow: column;
+        align-items: center;
+    }
+}

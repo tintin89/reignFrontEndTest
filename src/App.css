@@ -1,5 +1,13 @@
 .App {
-  text-align: center;
-  
+ width: 100%;
+ display: flex;
+ flex-flow: column;  
+ align-items: center;
+}
+
+
+
+main{
+    min-height: calc(100vh - 230px - 110px);
 }
 
