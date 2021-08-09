@@ -46,9 +46,10 @@ export const fetchPosts=(query,page)=>{
     return (dispatch,getState)=>{
      if(query!=="Select your news"){
          dispatch(updateLoading(true));
-        axios.get(` https://hn.algolia.com/api/v1/search_by_date?query=${query}&page=${page}`)
+
+        axios.get(`https://hn.algolia.com/api/v1/search_by_date?query=${query}&page=${page}`)
         .then(response=>{  
-               console.log(response.data)   
+            
            const temp = response.data.hits.filter(e=>{
              if(e.author!==null&&e.story_title!==null&&e.story_url!==null&&e.created_at!==null){
                  return e;
